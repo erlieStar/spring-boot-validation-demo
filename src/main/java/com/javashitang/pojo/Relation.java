@@ -1,4 +1,4 @@
-package com.st.pojo;
+package com.javashitang.pojo;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
-package com.st.controller;
+package com.javashitang.controller;
 
-import com.st.common.ServerResponse;
-import com.st.pojo.Student;
+import com.javashitang.common.ServerResponse;
+import com.javashitang.pojo.Student;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.validation.BindingResult;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
 import java.util.List;
 
 /**

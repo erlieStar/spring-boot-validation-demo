@@ -1,4 +1,4 @@
-package com.st.common;
+package com.javashitang.common;
 
 /**
  * @Author: lilimin
