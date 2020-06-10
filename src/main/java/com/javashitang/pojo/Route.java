@@ -28,10 +28,12 @@ public class Route {
         String errorMsg = CommonUtil.getErrorResult(route, RouteValidStart.class);
         // 始发地省id不能为空 详细地址不能为空
         System.out.println(errorMsg);
+
         route = Route.builder().startProvinceId(1).address("详细地址").build();
         errorMsg = CommonUtil.getErrorResult(route, RouteValidStart.class);
         // ""
         System.out.println(errorMsg);
+
         route = Route.builder().address("详细地址").build();
         errorMsg = CommonUtil.getErrorResult(route, RouteValidEnd.class);
         // 目的地省id不能为空
