@@ -1,4 +1,4 @@
-package com.st;
+package com.javashitang;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

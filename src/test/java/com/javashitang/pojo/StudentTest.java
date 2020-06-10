@@ -1,4 +1,4 @@
-package com.st.pojo;
+package com.javashitang.pojo;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
