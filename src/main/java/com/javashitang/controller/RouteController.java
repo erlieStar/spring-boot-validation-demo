@@ -21,7 +21,7 @@ import java.util.List;
 public class RouteController {
 
     @RequestMapping("addRoute")
-    public ServerResponse addRoute(@Validated({ValidateGroup.RouteValidEnd.class}) Route route, BindingResult bindingResult) {
+    public ServerResponse addRoute(@Validated({RouteValidStart.class}) Route route, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             List<FieldError> errorList = bindingResult.getFieldErrors();
             if (CollectionUtils.isNotEmpty(errorList)) {
