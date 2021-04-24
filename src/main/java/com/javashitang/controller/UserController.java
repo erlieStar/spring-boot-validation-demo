@@ -47,7 +47,7 @@ public class UserController {
     }
 
     /**
-     * @Validated 比 @Valid 更强大，支持嵌套校验，分组校验
+     * @Validated 比 @Valid 更强大，支持分组校验
      */
     @RequestMapping("registV3")
     public ServerResponse registV3(@Validated @RequestBody Student student, BindingResult bindingResult) {
