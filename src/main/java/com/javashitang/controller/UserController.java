@@ -62,7 +62,7 @@ public class UserController {
     }
 
     @RequestMapping("registV4")
-    public ServerResponse registV4(@Validated @RequestBody Student student) {
+    public ServerResponse registV4(@RequestBody Student student) {
         String errorMsg = CommonUtil.getErrorResult(student);
         if (StringUtils.isNotEmpty(errorMsg)) {
             return ServerResponse.illegalArgument(errorMsg);
