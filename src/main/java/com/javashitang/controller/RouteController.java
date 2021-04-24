@@ -1,6 +1,7 @@
 package com.javashitang.controller;
 
 import com.javashitang.common.ServerResponse;
+import com.javashitang.groupValidate.ValidateGroup.RouteValidEnd;
 import com.javashitang.groupValidate.ValidateGroup.RouteValidStart;
 import com.javashitang.pojo.Route;
 import com.javashitang.util.CommonUtil;
@@ -34,9 +35,25 @@ public class RouteController {
         return ServerResponse.success();
     }
 
+    /**
+     * 只校验开始时间和详细地址
+     */
     @RequestMapping("addRouteV2")
     public ServerResponse addRouteV2(@RequestBody Route route) {
         String errorMsg = CommonUtil.getErrorResult(route, RouteValidStart.class);
+        if (StringUtils.isNotEmpty(errorMsg)) {
+            return ServerResponse.illegalArgument(errorMsg);
+        }
+        // 调用service
+        return ServerResponse.success();
+    }
+
+    /**
+     * 只校验结束时间和详细地址
+     */
+    @RequestMapping("addRouteV3")
+    public ServerResponse addRouteV3(@RequestBody Route route) {
+        String errorMsg = CommonUtil.getErrorResult(route, RouteValidEnd.class);
         if (StringUtils.isNotEmpty(errorMsg)) {
             return ServerResponse.illegalArgument(errorMsg);
         }
