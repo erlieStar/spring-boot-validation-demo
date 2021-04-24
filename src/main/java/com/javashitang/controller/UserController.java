@@ -26,7 +26,7 @@ public class UserController {
     @RequestMapping("regist")
     public ServerResponse regist(@RequestParam("name") String name,
                                  @RequestParam("phone") String phone,
-                                 @RequestParam("phone") String email) {
+                                 @RequestParam("email") String email) {
         if (StringUtils.isBlank(name)) {
             return ServerResponse.illegalArgument("用户名不能为空");
         }
